@@ -31,6 +31,7 @@ Instead of writing everything in one script, responsibilities are divided into c
 ```
 .
 ├── oop-to-do.rb
+├── tasks.json    # Stores task data persistently
 ```
 
 ### Key Components
@@ -60,6 +61,8 @@ Run the application:
 ```bash
 ruby oop-to-do.rb
 ```
+
+Tasks are automatically loaded from `tasks.json` on startup and saved when you exit.
 
 Then use the menu options to manage tasks:
 
