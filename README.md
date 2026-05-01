@@ -2,6 +2,21 @@
 
 A simple command-line to-do list written in Ruby using object-oriented design.
 
+## Project Purpose
+
+This project demonstrates how a basic procedural CLI application can be redesigned using Object-Oriented Programming concepts such as:
+
+* Encapsulation
+* Abstraction
+* Separation of concerns
+
+Instead of writing everything in one script, responsibilities are divided into classes, making the code more maintainable and scalable.
+
+👉 For the procedural (non-OOP) version of this project, see:
+**`ruby-todo-cli`**
+
+---
+
 ## Features
 
 - Add tasks
@@ -9,6 +24,29 @@ A simple command-line to-do list written in Ruby using object-oriented design.
 - Mark tasks as done
 - Delete tasks
 - Clean object-oriented implementation with `Task` and `ToDoList` classes
+
+## Project Structure
+
+```
+.
+├── oop-to-do.rb
+```
+
+### Key Components
+
+#### `Task`
+
+* Represents a single task
+* Stores task title and completion status
+* Handles marking a task as complete
+
+#### `ToDoList`
+
+* Manages the list of tasks
+* Handles adding, deleting, and updating tasks
+* Controls how tasks are displayed
+
+---
 
 ## Requirements
 
@@ -54,6 +92,36 @@ Choose an option: 2
 1. [ ] Finish homework
 ```
 
+---
+
+## Limitations
+
+* No data persistence (tasks reset after exiting)
+* Basic input validation
+* CLI-based (no graphical interface)
+
+---
+
+## Related Projects
+
+* **`ruby-todo-cli`** – Procedural version of this application
+
+---
+
+
+## Contributing
+
+Contributions are welcome!
+
+1. Fork the repository
+2. Create a new branch
+3. Make your changes
+4. Submit a pull request
+
+---
+
 ## License
 
 This project is open source. Feel free to use and modify it.
+
+> Simple tools build strong foundations. Start small, build smart, and scale later 🚀 
