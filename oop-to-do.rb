@@ -1,3 +1,4 @@
+require 'json'
 class Task 
   attr_accessor :title, :completed
 
@@ -19,11 +20,13 @@ end
 class ToDoList
   def initialize
     @tasks = []
+    load_from_file
   end
 
   def add_task(title)
     @tasks << Task.new(title)
     puts "Task added."
+    save_to_file
   end
   
   def view_tasks
@@ -41,6 +44,7 @@ class ToDoList
     if valid_index?(index)
       @tasks[index].mark_done
       puts "Task marked as done."
+      save_to_file
     else
       puts "Invalid task number."
     end
@@ -50,8 +54,29 @@ class ToDoList
     if valid_index?(index)
       @tasks.delete_at(index)
       puts "Task deleted."
+      save_to_file
     else
       puts "Invalid task number."
+    end
+  end
+
+  def save_to_file
+    File.write("tasks.json", JSON.pretty_generate(@tasks.map { |t| {
+      title: t.title,
+      completed: t.completed
+    }}))
+  end
+
+  def load_from_file
+    if File.exist?("tasks.json")
+      data = JSON.parse(File.read("tasks.json"))
+      @tasks = data.map do |task|
+        t = Task.new(task["title"])
+        t.completed = task["completed"]
+        t
+      end
+    else
+      @tasks = []
     end
   end
 
