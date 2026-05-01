@@ -13,7 +13,7 @@ This project demonstrates how a basic procedural CLI application can be redesign
 Instead of writing everything in one script, responsibilities are divided into classes, making the code more maintainable and scalable.
 
 👉 For the procedural (non-OOP) version of this project, see:
-**`ruby-todo-cli`**
+**`ruby-todo-cli`** https://github.com/Usa-ma-a/ruby-to-do-cli.git
 
 ---
 
