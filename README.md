@@ -104,7 +104,7 @@ Choose an option: 2
 
 ## Related Projects
 
-* **`ruby-todo-cli`** – Procedural version of this application
+* **`ruby-todo-cli`** https://github.com/Usa-ma-a/ruby-to-do-cli.git – Procedural version of this application
 
 ---
 
