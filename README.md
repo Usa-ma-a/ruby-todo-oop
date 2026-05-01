@@ -23,6 +23,7 @@ Instead of writing everything in one script, responsibilities are divided into c
 - View tasks with completion status
 - Mark tasks as done
 - Delete tasks
+- Persistent storage: tasks are saved to a JSON file and loaded on startup
 - Clean object-oriented implementation with `Task` and `ToDoList` classes
 
 ## Project Structure
@@ -96,7 +97,6 @@ Choose an option: 2
 
 ## Limitations
 
-* No data persistence (tasks reset after exiting)
 * Basic input validation
 * CLI-based (no graphical interface)
 
